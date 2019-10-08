@@ -1,16 +1,16 @@
 import React from  "react";
 //import Button from "@material-ui/core/Textfield";
-import Typography from "@material-ui/core/Typography";
+//import Typography from "@material-ui/core/Typography";
 import {Link, Redirect} from "react-router-dom"
 import {
-	HelpBlock,
+	//HelpBlock,
 	FormGroup,
 	FormControl,
 	FormLabel
 } from "react-bootstrap";
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Bootstrap from 'react-bootstrap';
+//import Form from 'react-bootstrap/Form';
+//import Button from 'react-bootstrap/Button';
+//import Bootstrap from 'react-bootstrap';
 
 class Signup extends React.Component {
 	constructor(props) {
@@ -23,15 +23,15 @@ class Signup extends React.Component {
 				isAuthenticated: false
 		}
 	}
-	componentDidMount() {
-		const auth = sessionStorage.getItem("");
-		if(auth){
-			this.setState({
-				isAuthenticated: true
-			});
-			return;
-		}
-	}
+	// componentDidMount() {
+	// 	const auth = sessionStorage.getItem("");
+	// 	if(auth){
+	// 		this.setState({
+	// 			isAuthenticated: true
+	// 		});
+	// 		return;
+	// 	}
+	// }
 	
 	handleChange = event => {
 		this.setState({[event.target.id]: event.target.value});
@@ -61,7 +61,7 @@ class Signup extends React.Component {
 		}
 		return (
 			<div className = 'Signup'>
-				//<form onSubmit={this.handleSubmit}>
+				{/* <form onSubmit={this.handleSubmit}> */}
 					<FormGroup controlId ="firstname" bsSize="large">
 						<FormLabel>Firstname</FormLabel>
 						<FormControl
@@ -98,7 +98,6 @@ class Signup extends React.Component {
 							onChange={this.handleChange}
 						/>
 					</FormGroup>
-				</form>
 				<h3>Already signed up? <Link to='/'>Click here to sign in!</Link></h3>
 			</div>
 		);
